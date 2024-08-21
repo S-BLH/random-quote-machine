@@ -28,6 +28,7 @@ body {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   width: 90%;
+  animation: fadeIn 1s ease;
 }
 
 /* Quote text styling */
@@ -90,11 +91,6 @@ body {
 
 #tweet-quote:hover {
   background: #5e0f37; /* Darker pink on hover */
-}
-
-/* Smooth fade-in animation */
-#quote-box {
-  animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
