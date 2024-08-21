@@ -1,13 +1,126 @@
+/* Base styling */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #5e0f37; /* Pink background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Center the quote box */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styling the quote box */
+#quote-box {
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Quote text styling */
+#text {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#text::before {
+  content: "“";
+  font-size: 60px;
+  color: #fff; /* White quotation mark */
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+/* Author styling */
+#author {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Buttons container */
+#button-container {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+  width: 100%;
+}
+
+/* New quote button styling */
+#new-quote {
+  background: #5e0f37; /* Pink background */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  margin-right: 10px; /* Space between buttons */
+}
+
+#new-quote:hover {
+  background: #5e0f37; /* Darker pink on hover */
+}
+
+/* Tweet quote button styling */
+#tweet-quote {
+  background: #5e0f37; /* Pink background */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#tweet-quote:hover {
+  background: #5e0f37; /* Darker pink on hover */
+}
+
+/* Smooth fade-in animation */
+#quote-box {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #text {
+    font-size: 20px;
+  }
+
+  #author {
+    font-size: 18px;
+  }
+
+  #new-quote,
+  #tweet-quote {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
