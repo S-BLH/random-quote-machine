@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' for React 18+
-import App from './App';
+import React, { useState, useEffect } from 'react';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+function App() {
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
 
   const fetchQuote = () => {
     const quotes = [
@@ -47,12 +47,13 @@ root.render(<App />);
           id="new-quote"
           className="quote-button"
           onClick={fetchQuote}
-          type="button" // Added type attribute
+          type="button"
         >
           New Quote
         </button>
       </div>
     </div>
   );
+}
 
 export default App;
