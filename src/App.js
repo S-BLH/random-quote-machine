@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' for React 18+
+import App from './App';
 
-function App() {
-  const [quote, setQuote] = useState('');
-  const [author, setAuthor] = useState('');
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 
   const fetchQuote = () => {
     const quotes = [
@@ -54,6 +54,5 @@ function App() {
       </div>
     </div>
   );
-}
 
 export default App;
